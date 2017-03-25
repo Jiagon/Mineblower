@@ -1,0 +1,5 @@
+ZapLoop tracks used in a Vertical Remixing object to play a 2-bar loop of annoyingly energetic music to accompany the sub being zapped by eels.  When the sub first touches an eel, all the layers start playing.  As the sub continues to stay zapped, the layers fade out, starting with layer 0, using a period set in the main method by the variable zapPeriod, which is the number of frames to pass before the next track fades out.  Track 0 never fades until the sub becomes unzapped and remains so for zapPeriod/2 frames.
+
+ZapLoopGains.txt contains the gain levels for each of the corresponding .wav files.  Use .wav files when the loop must be precise, as .mp3 files have a gap of silence due to the Fourier windowing done in performing the perceptually based codec.
+
+If you change the number of loop files, be sure and change the number of files parameter to the constructor, when the zapLayers object is instantiated in the Audio.pde source file.
